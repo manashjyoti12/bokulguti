@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Bokul guti</title>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Fontdiner+Swanky|Roboto+Slab">
+	<link rel="stylesheet" href="dist/app.css">
+
+	<!-- tailwind css cdn -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						clifford: '#da373d',
+					}
+				}
+			}
+		}
+	</script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Open+Sans:wght@300&family=Poppins:wght@500&family=Satisfy&display=swap"
+		rel="stylesheet">
+
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Open+Sans:wght@300&family=Poppins:wght@500&family=Satisfy&display=swap');
+		</style>
+
+	<!-- flowbite cdn -->
+	<link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
+	
+	<link rel="stylesheet" href="style1.css" />
+</head>
+<body data-player="one" class="mt-36">
+	<h1 class="text-8xl mb-16 font-bold ">Bokul Guti</h1>
+
+	<div class="board shadow-xl">
+		<div class="player-two store"><p></p></div>
+
+		<div class="rows">
+			<div class="row player-two">
+				<div class="pit"><p>5</p></div>
+				<div class="pit"><p>5</p></div>
+				<div class="pit"><p>5</p></div>
+				<div class="pit"><p>5</p></div>
+				<div class="pit"><p>5</p></div>
+				<!-- <div class="pit"><p>5</p></div> -->
+			</div>
+
+			<div class="row player-one">
+				<div class="pit"><p>5</p></div>
+				<div class="pit"><p>5</p></div>
+				<div class="pit"><p>5</p></div>
+				<div class="pit"><p>5</p></div>
+				<div class="pit"><p>5</p></div>
+				<!-- <div class="pit"><p>5</p></div> -->
+			</div>
+		</div>
+
+		<div class="player-one store"><p></p></div>
+	</div>
+
+	<p class="status font-semibold pt-10 text-xl">It is player <span class="current-player">one</span>'s turn</p>
+
+	<div class="flex justify-center gap-6">
+		<button class="new-game mt-10 bg-white p-2 rounded-lg font-semibold">New Game</button>
+		<button class="new-game mt-10 bg-white p-2 rounded-lg font-semibold " type="button" data-modal-toggle="extralarge-modal">How to play ?</button>
+	</div>
+	
+	<!-- modal start -->
+
+	<!-- Extra Large Modal -->
+	<div id="extralarge-modal" tabindex="-1"
+		class=" fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full ">
+		<div class="relative w-full h-full max-w-7xl md:h-auto">
+			<!-- Modal content -->
+			<div class="border-8 border-yellow-700   popup relative bg-white rounded-3xl shadow ">
+				<!-- Modal header -->
+				<div class="flex items-center justify-between p-5  rounded-t border-gray-600">
+	
+					<h3
+						class="pt-4 font-mono text-6xl pl-96 font-medium text-yellow-700   flex justify-center tracking-widest font-bold">
+						HOW TO PLAY 
+					</h3>
+					<button type="button"
+						class="text-gray-100 bg-transparent bg-red-600 hover:text-gray-900 rounded-full text-5xl p-2 ml-auto inline-flex items-center hover:bg-gray-600 hover:text-white"
+						data-modal-toggle="extralarge-modal">
+						<svg aria-hidden="true" class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"
+							xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd"
+								d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+								clip-rule="evenodd"></path>
+						</svg>
+						<span class="sr-only">Close modal</span>
+					</button>
+				</div>
+				
+				<!-- Modal body -->
+				<div class="mt-6 p-6 space-y-6 px-28">
+					<p class="text-base leading-relaxed font-sans text-amber-700">
+						<h3> The game begins with one player picking up all of the marbles in any one of the holes on his side.Moving counter-clockwise, 
+							the player deposits one of the marbles in each hole until the marbles run out.</h3></p>
+					</p>
+					<p class="text-base leading-relaxed text-amber-700">
+						<h3>If you run into your own store, deposit one piece in it.<br>
+							If the player run into the opponen's store, skip it.<br>
+							If the last piece the player drops is in his own store, he get a free turn.<br>
+							If the last piece the player drops is in an empty hole on his side, he capture that marble and any marblees in the hole directly opposite.<br>
+							The player should always place all captured marbles in his store.</h3>
+					</p>
+					<p class="text-base leading-relaxed text-amber-700">
+						<h3>The game ends when all five spaces on one side are empty.The player who still has marbles on his side when the game ends captures 
+							all of those marbles.</h3>
+					</p>
+					<p class="text-base leading-relaxed text-amber-700">
+						<p><h3>Count all the marbles in each store. The winner is the player with the most marbes.</h3>
+					</p>
+				
+	
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- modal end -->
+
+	<script src="dist/app.js"></script>
+	<script src="http://localhost:35729/livereload.js"></script>
+	<script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+</body>
+</html>
